@@ -1,8 +1,9 @@
+import * as path from 'path';
 import { Options } from '@mikro-orm/core';
 import { PostgreSqlDriver } from '@mikro-orm/postgresql';
-import * as path from 'path';
+import { TsMorphMetadataProvider } from '@mikro-orm/reflection';
 
-export const config: Options = {
+const config: Options = {
   driver: PostgreSqlDriver,
   host: process.env.DB_HOST,
   port: parseInt(process.env.DB_PORT, 10),
@@ -11,9 +12,12 @@ export const config: Options = {
   dbName: process.env.DB_NAME,
   entities: ['dist/**/*.entity.js'],
   entitiesTs: ['src/**/*.entity.ts'],
+  metadataProvider: TsMorphMetadataProvider,
   migrations: {
     path: path.join(__dirname, './migrations'),
     pathTs: undefined,
     glob: '!(*.d).{js,ts}',
   },
 };
+
+export default config;

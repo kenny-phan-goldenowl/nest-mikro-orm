@@ -20,4 +20,10 @@ export class Post {
 
   @Property({ nullable: true })
   metaDescription?: string;
+
+  @Property({ nullable: true })
+  metaKeyword?: string;
+
+  @Property({ nullable: true })
+  metaTitle?: string;
 }

@@ -20,4 +20,10 @@ export class PostType {
 
   @Field(() => String, { nullable: true })
   metaDescription?: string;
+
+  @Field(() => String, { nullable: true })
+  metaKeyword?: string;
+
+  @Field(() => String, { nullable: true })
+  metaTitle?: string;
 }

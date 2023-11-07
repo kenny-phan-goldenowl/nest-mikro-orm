@@ -61,6 +61,24 @@
           "primary": false,
           "nullable": true,
           "mappedType": "string"
+        },
+        "meta_keyword": {
+          "name": "meta_keyword",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "string"
+        },
+        "meta_title": {
+          "name": "meta_title",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "string"
         }
       },
       "name": "post",
